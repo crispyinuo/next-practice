@@ -1,0 +1,171 @@
+.body{
+    margin-left: 200px;
+}
+
+.profileCard {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 300px;
+  margin: 16px;
+  float: left;
+}
+
+.profileCard:hover {
+  cursor:pointer;
+  background:#62dbc4; 
+}
+
+.profileCard h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.profileCard p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.header {
+  padding: 40px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+  width: 100%;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-family: Georgia, serif;
+}
+
+.sidebarlist {
+  margin: 0;
+  padding: 0;
+}
+
+
+.sidebar .row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 5%;
+  color: black;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar .row:hover {
+  cursor:pointer;
+  background:#1abc9c; 
+}
+
+.logoblock{
+  height: 115px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoblock .logo{
+  width: 180px;
+  padding: 10px;
+}
+
+.addbutton {
+  background-color:  black;
+  height: 60px;
+  width: 60px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: none;
+  position: fixed;
+  bottom: 10%;
+  color: white;
+  right: 5%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.addbutton:hover {
+  background: #1abc9c;
+  cursor: pointer;
+}
+
+.popup{
+  position:fixed;
+  background: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.popup .submit-btn {
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: #50a3a2;
+  border-radius: 3px;
+  margin: 0 auto;
+  display: block;
+  width: 150px;
+  font-size: 18px;
+}
+
+.popup .submit-btn:hover {
+  cursor:pointer;
+  background: black;
+  color:white;
+}
+
+.popup .close-btn {
+  top: 16px;
+  position:absolute;
+  right: 16px;
+  background-color: white;
+  color: #50a3a2;
+}
+
+.popup-inner{
+  position:relative;
+  padding: 32px;
+  width:30%;
+  background: #50a3a2;
+}
+
+input {
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.2);
+  width: 80%;
+  border-radius: 3px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px 15px;
+  margin: 20px auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  font-weight: 300;
+}
+
+
