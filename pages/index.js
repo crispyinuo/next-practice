@@ -1,5 +1,6 @@
 import React from "react";
 import Team from './team';
+import firebase from '../firebase/fireConfig';
 
 
 function index(){

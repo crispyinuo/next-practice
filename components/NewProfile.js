@@ -1,4 +1,10 @@
 import React, {useState} from "react";
+import firebase from 'firebase/app';
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import {collection, addDoc} from 'firebase/firestore';
+import db from "../firebase/fireConfig";
+
 
 function NewProfile(props){
 
@@ -37,6 +43,26 @@ function NewProfile(props){
         setImage("");
     }
 
+    async function onSubmit(){
+        props.setTrigger(false); 
+    
+            try{
+                const docRef = await addDoc(collection(db,"members"),{
+                    id: props.size+1,
+                    fName: fname,
+                    lName: lname,
+                    imageURL: image,
+                    description: description,       
+                });
+                console.log("Document written with ID: ", docRef.id);
+            }
+            catch(e){
+                console.error("Error adding document: ", e);
+            }
+
+        setDefault();
+    }
+
     
     return (props.trigger)?(<div className="popup">
         <div className="popup-inner">
@@ -70,7 +96,7 @@ function NewProfile(props){
             placeholder="ImageURL"
             value={image}
             />
-            <button className="submit-btn" onClick={()=> {props.setTrigger(false); props.addProfile(fname,lname, description,image);{setDefault()};}}>Submit</button>
+            <button className="submit-btn" onClick={onSubmit}>Submit</button>
         </div>
     </div>):null;
 }
